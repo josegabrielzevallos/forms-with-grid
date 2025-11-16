@@ -1,0 +1,164 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* ===== Header fijo ===== */
+.header-head{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color:  #737373;
+}
+
+
+nav{
+  /* max-width: 1100px; reviwe why center th eheader */
+  margin: 50;
+  padding: 0px 32px;
+  min-height: 80px;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+nav img { max-height: 48px; display:block; }
+.spacer{ flex: 1 1 auto; }
+
+/* Menú principal */
+nav ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+nav ul li{ position: relative; }
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 4px;
+  display: inline-block;
+}
+nav ul li a.current{ color: aquamarine; font-weight: 700; }
+nav ul li a:hover{ color: orange; }
+nav ul li a:active{ color: green; }
+
+
+/* Centrar la card con Grid */
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* Card principal */
+.card {
+  width: 960px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 32px 40px 28px;
+  border: 1px solid #f0e4e4;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  margin-top: 115px;
+}
+
+.card-header h1 {
+  margin: 0 0 24px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* FORM EN GRID de 2 columnas */
+.job-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 24px;
+  grid-template-areas:
+    "first last"
+    "email role"
+    "address address"
+    "city zip"
+    "start cv"
+    "actions actions";
+}
+
+/* Áreas */
+.field-first-name { grid-area: first; }
+.field-last-name  { grid-area: last; }
+.field-email      { grid-area: email; }
+.field-role       { grid-area: role; }
+.field-address    { grid-area: address; }
+.field-city       { grid-area: city; }
+.field-zip        { grid-area: zip; }
+.field-start-date { grid-area: start; }
+.field-cv         { grid-area: cv; }
+.form-actions     { grid-area: actions; }
+
+/* Campos */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #d4d4d4;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb33;
+}
+
+/* Textarea dirección */
+.field-address textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Botón Apply Now alineado a la derecha */
+.form-actions {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  padding: 12px 40px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: #ffffff;
+}

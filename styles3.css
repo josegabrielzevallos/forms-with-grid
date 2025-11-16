@@ -1,0 +1,175 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #e5e7eb;
+}
+
+/* ===== Header fijo ===== */
+.header-head{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color:  #737373;
+}
+
+
+nav{
+  /* max-width: 1100px; reviwe why center th eheader */
+  margin: 0 auto;
+  padding: 0px 32px;
+  min-height: 80px;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+nav img { max-height: 48px; display:block; }
+.spacer{ flex: 1 1 auto; }
+
+/* Menú principal */
+nav ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+nav ul li{ position: relative; }
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 4px;
+  display: inline-block;
+}
+nav ul li a.current{ color: aquamarine; font-weight: 700; }
+nav ul li a:hover{ color: orange; }
+nav ul li a:active{ color: green; }
+
+
+/* Centra la card en la pantalla usando Grid */
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* Card principal blanca */
+.card {
+  width: 960px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  padding: 40px 56px 32px;
+}
+
+/* Título y subtítulo */
+.card-header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.card-header p {
+  margin: 0 0 32px;
+  color: #6b7280;
+}
+
+/* FORMULARIO EN GRID (2 columnas) */
+.appointment-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "fullname date"
+    "email   message"
+    "phone   message"
+    "actions actions";
+  gap: 18px 24px;
+}
+
+/* Asignar áreas */
+.field-fullname { grid-area: fullname; }
+.field-date     { grid-area: date; }
+.field-email    { grid-area: email; }
+.field-message  { grid-area: message; }
+.field-phone    { grid-area: phone; }
+.form-actions   { grid-area: actions; }
+
+/* Campos genéricos */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Inputs, selects y textarea */
+input,
+select,
+textarea {
+  font: inherit;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background-color: #f3f4ff; /* azul muy clarito tipo diseño */
+  padding: 12px 14px;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb33;
+}
+
+/* Grupo de teléfono (+971 select + input) */
+.phone-group {
+  display: grid;
+  grid-template-columns: 0.7fr 2fr;
+  gap: 8px;
+}
+
+.phone-group select {
+  padding-right: 8px;
+}
+
+/* Área de mensaje más grande */
+.field-message textarea {
+  min-height: 140px;
+}
+
+/* Botón alineado abajo a la derecha */
+.form-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  padding: 12px 32px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: #ffffff;
+}

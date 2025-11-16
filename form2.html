@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles2.css" />
+</head>
+<body>
+     <header class="header-head">
+    <nav>
+      <ul>
+        <li><a href="index.html" >Form 1</a></li>
+        <li><a href="form2.html"class="current">Form 2</a></li>
+        <li><a href="form3.html" >Form 3</a></li>
+        <li><a href="form4.html">From 4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="card">
+
+      <!-- Columna 1: imagen -->
+      <div class="card-image">
+        <!-- Cambia la ruta por tu propia imagen -->
+        <img src="./image/contac1.png" alt="Notebook and smartphone on a desk">
+      </div>
+
+      <!-- Columna 2: formulario -->
+      <div class="card-main">
+        <h1>Contact Us</h1>
+
+        <form class="contact-form" action="#" method="post">
+          <div class="field">
+            <label for="name" class="sr-only">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Full Name" required />
+          </div>
+
+          <div class="field">
+            <label for="email" class="sr-only">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="E-mail" required />
+          </div>
+
+          <div class="field">
+            <label for="message" class="sr-only">Message</label>
+            <textarea id="message" name="message" placeholder="Message" rows="3"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit">Contact Us</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Columna 3: info de contacto -->
+      <aside class="card-info">
+        <div class="info-block">
+          <h2>Contact</h2>
+          <p>hi@green.com</p>
+        </div>
+
+        <div class="info-block">
+          <h2>Based in</h2>
+          <p>New York,<br>California, Ohio</p>
+        </div>
+
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">i</a>
+          <a href="#" aria-label="Twitter">t</a>
+        </div>
+      </aside>
+
+    </section>
+  </main>
+</body>
+</html>

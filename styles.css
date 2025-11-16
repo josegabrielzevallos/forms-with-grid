@@ -1,0 +1,146 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+/* ===== Header fijo ===== */
+.header-head{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #737373;
+}
+
+
+nav{
+  /* max-width: 1100px; reviwe why center th eheader */
+  margin: 0 auto;
+  padding: 0px 32px;
+  min-height: 80px;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+nav img { max-height: 48px; display:block; }
+.spacer{ flex: 1 1 auto; }
+
+/* Menú principal */
+nav ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+nav ul li{ position: relative; }
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 4px;
+  display: inline-block;
+}
+nav ul li a.current{ color: aquamarine; font-weight: 700; }
+nav ul li a:hover{ color: orange; }
+nav ul li a:active{ color: green; }
+
+
+/* Centrar la tarjeta en pantalla usando grid */
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #e5e7eb; /* gris suave de fondo */
+}
+
+/* Tarjeta azul */
+.card {
+  width: 800px;          /* aprox como el diseño */
+  height: 550px;         /* para que se vea rectangular */
+  background-color: #2563eb; /* azul fuerte */
+  color: #ffffff;
+  padding: 60px 80px;
+  margin-top: 115px;
+}
+
+/* Título y subtítulo */
+.card-header h1 {
+  margin: 0 0 8px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.card-header p {
+  margin: 0 0 40px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Formulario usando CSS Grid */
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "name  email"
+    "phone phone"
+    "btn   btn";
+  gap: 16px 20px;
+}
+
+/* Áreas del grid */
+.field-name  { grid-area: name; }
+.field-email { grid-area: email; }
+.field-phone { grid-area: phone; }
+.form-actions { grid-area: btn; }
+
+/* Campos */
+.field input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+}
+
+/* Placeholder gris oscurito */
+.field input::placeholder {
+  color: #6b7280;
+}
+
+/* Botón */
+.form-actions {
+  margin-top: 20px;
+  display: grid;
+  justify-content: flex-start; /* botón alineado a la izquierda */
+}
+
+button {
+  padding: 12px 40px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #2563eb;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.25);
+}
+
+/* Clase para ocultar label pero mantener accesible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

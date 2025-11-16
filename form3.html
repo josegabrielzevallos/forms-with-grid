@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book your appointment now</title>
+  <link rel="stylesheet" href="styles3.css" />
+</head>
+<body>
+    <header class ="header-head">
+    <nav>
+      <ul>
+        <li><a href="index.html" >Form 1</a></li>
+        <li><a href="form2.html">Form 2</a></li>
+        <li><a href="form3.html" class="current">Form 3</a></li>
+        <li><a href="form4.html">From 4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="card">
+      <header class="card-header">
+        <h1>Book your appointment now</h1>
+        <p>So our team can reach out to you on time</p>
+      </header>
+
+      <form class="appointment-form" action="#" method="post">
+        <!-- Full name -->
+        <div class="field field-fullname">
+          <label for="fullname">Full Name</label>
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="eg: John Doe"
+            required
+          />
+        </div>
+
+        <!-- Available date -->
+        <div class="field field-date">
+          <label for="date">Available Date</label>
+          <select id="date" name="date" required>
+            <option value="" disabled selected>Select</option>
+            <option value="2025-11-20">20 Nov 2025</option>
+            <option value="2025-11-21">21 Nov 2025</option>
+            <option value="2025-11-22">22 Nov 2025</option>
+          </select>
+        </div>
+
+        <!-- Email -->
+        <div class="field field-email">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="eg: john@email.com"
+            required
+          />
+        </div>
+
+        <!-- Message -->
+        <div class="field field-message">
+          <label for="message">Share Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <!-- Phone -->
+        <div class="field field-phone">
+          <label for="phone">Phone Number</label>
+
+          <div class="phone-group">
+            <select id="country-code" name="country_code">
+              <option value="+971">+971</option>
+              <option value="+1">+1</option>
+              <option value="+51">+51</option>
+            </select>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="543210987"
+            />
+          </div>
+        </div>
+
+        <!-- Botón -->
+        <div class="form-actions">
+          <button type="submit">
+            Book Now →
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
