@@ -16,13 +16,8 @@ Assignment for **Web Development Essentials** – practicing HTML forms and CSS 
 4. **Job Application Form** – based on Figma design by **Nitish Sharma**  
    Figma: https://www.figma.com/community/file/1199220142157640683
 
-## Development Team
+## Developer
 
-- Your Name – HTML structure, CSS Grid layout, accessibility.
-- (Opcional) Teammate Name – styling, assets, testing.
+- Jose Gbariel Zevallos Delgado de la Flor – HTML structure, CSS Grid layout, accessibility.
 
-## Notes
 
-- Desktop-only layout (non-responsive), as required.
-- Layouts use **CSS Grid** (no Flexbox for main layout).
-- Image assets from Unsplash/Pexels/Pixabay.
